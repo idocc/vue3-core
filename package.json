@@ -1,14 +1,12 @@
 {
   "private": true,
-  "workspaces": [
-    "packages/"
-  ],
   "name": "vue3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/dev.mjs"
   },
   "keywords": [],
   "author": "",
