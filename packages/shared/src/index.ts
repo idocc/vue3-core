@@ -1,2 +1,4 @@
-let a = 1
-export { a }
+// 公共方法
+export function isObject(target) {
+    return typeof target === 'object' && target != null
+}
