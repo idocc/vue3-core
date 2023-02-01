@@ -9,13 +9,15 @@
 </head>
 
 <body>
-    <script src="../reactivity/dist/reactivity.global.js"></script>
+    <script src="../packages/reactivity/dist/reactivity.global.js"></script>
     <script>
-        let { reactive, readonly, shallowReactive, shallowReadonly } = VueReactivity
-        let state = shallowReadonly({ name: '张三', list: { a: 200 } })
-        state.list.a = 1
+        let { reactive, effect } = VueReactivity
+        let obj = { name: '张三', age: {n:0} }
+        const state = reactive(obj)
+        effect(() => {
+            state.name
+        })
 
-       
     </script>
 </body>
 
